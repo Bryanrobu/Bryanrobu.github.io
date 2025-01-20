@@ -1,0 +1,499 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    border: none;
+    cursor: default;
+    background-color: #000000;
+}
+
+header {
+    width: 100vw;
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    gap: 1vw;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h1 {
+    background-color: transparent;
+}
+
+h2 {
+    background-color: transparent;
+}
+
+h4 {
+    background-color: transparent;
+}
+
+a {
+    color: #000000;
+    transition: all 0.1s;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+a:hover .change-purple {
+    transition: all 0.1s;
+    color: #6d00a0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+/* -----------------------------------Header---------------------------------------- */
+
+.header-cont {
+    background-color: white;
+    width: 90vw;
+    height: 4vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sides-cont {
+    width: 15vw;
+}
+
+.logo {
+    background-color: transparent;
+    font-size: 1.4vw;
+}
+
+.text-cont {
+    font-size: 0.9vw;
+    background-color: transparent;
+    transition: all 0.2s;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.text-cont:hover {
+    padding: 0px;
+    font-size: 1vw;
+    transition: all 0.2s;
+}
+
+.header-line {
+    width: 0.1vw;
+    height: 2vw;
+    color: #000000;
+}
+
+.cv {
+    background-color: #ffffff;
+    gap: 20px;
+}
+
+.github {
+    height: 2.5vw;
+    background-color: #ffffff;
+    transition: all 0.2s;
+}
+
+.github:hover {
+    scale: 1.1;
+    rotate: 7deg;
+}
+
+.get-cv {
+    gap: 10px;
+    background-color: #ffffff;
+    border: solid 0.15vw #000000;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    padding-top: 0.3vw;
+    padding-bottom: 0.3vw;
+    border-radius: 100px;
+    box-shadow: 0.05VW 0.1VW 0.2VW;
+    transition: all 0.2s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8vw;
+}
+
+.get-cv:active {
+    box-shadow: 0.04px 0.09px 0.19px;
+    transition: all 0.2s;
+    scale: 0.995;
+}
+
+.get-cv:hover {
+    background-color: #000000;
+    transition: all 0.2s;
+    color: #9E00E7;
+    border-color: #9E00E7;
+}
+
+.get-cv:hover .text-white {
+    color: white;
+}
+
+/* --------------------------------CV-popup------------------------------------- */
+
+.cv-popup {
+    display: none;
+    position: fixed;
+    padding-top: 10vw;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vw;
+    background: #00000071;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+
+    border-radius: 0;
+}
+
+.cv-popup-content {
+    width: 40vw;
+    margin: auto;
+    position: relative;
+    background: #fbfbfbde;
+    gap: 2vh;
+    padding: 5vh;
+    border-radius: 2vw;
+    animation-name: cv-animate;
+    animation-duration: 0.75s;
+}
+
+.close {
+    position: absolute;
+    right: 2vw;
+    top: 3vh;
+    background-color: transparent;
+    height: 3vw;
+}
+
+@keyframes cv-animate {
+    from {
+        top: -100vh;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* ----------------------------------Main--------------------------------------- */
+
+.main-buttons-cont {
+    display: none;
+    margin-top: 5vw;
+    width: 100vw;
+}
+
+.buttons-cont {
+    display: none;
+    width: 75vw;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.main-buttons {
+    display: none;
+    flex-wrap: nowrap;
+    background-color: #ffffff;
+    border: solid 0.15vw #000000;
+    padding-left: 0.8vw;
+    padding-right: 0.8vw;
+    padding-top: 0.4vw;
+    padding-bottom: 0.4vw;
+    border-radius: 100px;
+    font-size: 1.25vw;
+    transition: all 0.2s;
+    width: 11vw;
+}
+
+.main-buttons:hover {
+    transition: all 0.2s;
+    scale: 0.95;
+}
+
+.open-vertical {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 77vw;
+    rotate: 90deg;
+    width: fit-content;
+    height: 100vw;
+    margin-top: -30vw;
+    margin-bottom: -30vw;
+    display: none;
+}
+
+.main {
+    width: 100vw;
+    height: fit-content;
+    gap: 2vw;
+    background-color: transparent;
+}
+
+.open {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25vw;
+}
+
+.introduction-text-container {
+    gap: 4vw;
+    margin-top: 4.20vw;
+}
+
+.introduction-text {
+    color: #ffffff;
+    width: 40vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+}
+
+.hidden {
+    width: 100vw;
+    height: 15vh;
+    background-color: red;
+}
+
+/* --------------------------------Projecten------------------------------------ */
+
+.projecten-cont {
+    gap: 3vw;
+    padding-top: 5vw;
+}
+
+.projecten-txt-cont {
+    color: #ffffff;
+    width: 80vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    gap: 2vw;
+    align-self: center;
+}
+
+.projecten-img-cont {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.my-projects-img {
+    width: 35vw;
+}
+
+/* -----------------------------Contact/info------------------------------------ */
+
+.contact-info-body {
+    width: 100vw;
+    color: #ffffff;
+    gap: 4vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+.contact-info-header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+    gap: 1vw;
+}
+
+.line-under-text {
+    height: 0.1vw;
+    width: 40vw;
+    background-color: #ffffff;
+}
+
+.contact-info-text {
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 2vw;
+    font-size: 0.8vw;
+    width: 50vw;
+    text-align: center;
+}
+
+/* --------------------------------Footer--------------------------------------- */
+
+.footerbg {
+    height: 4vw;
+    width: 100vw;
+    background-color: #252525;
+    margin-top: 5vh;
+}
+
+.footertxt {
+    color: #7a7a7a;
+    background-color: transparent;
+    font-size: 0.8vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------------------------------Colors-------------------------------------- */
+
+.txt-purple {
+    color: #9E00E7;
+    /*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH */
+}
+
+.txt-lesspurple {
+    color: #6d00a0;
+}
+
+/* -------------------------------Keyframes------------------------------------- */
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        display: none;
+    }
+
+    .header-cont {
+        justify-content: space-evenly;
+    }
+
+    .get-cv {
+        font-size: 1.1vw;
+    }
+
+    .github {
+        height: 4vw;
+    }
+
+    .logo {
+        font-size: 2.5vw;
+    }
+
+    .introduction-text {
+        width: 60vw;
+        font-size: 2.5vw;
+    }
+
+    .open {
+        font-size: 32vw;
+    }
+
+    .footerbg {
+        height: 5vw;
+    }
+
+    .footertxt {
+        font-size: 1.2vw;
+    }
+
+    .main-buttons {
+        display: flex;
+    }
+
+    .main-buttons-cont {
+        display: flex;
+    }
+
+    .buttons-cont {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .open {
+        display: none;
+    }
+
+    .get-cv {
+        display: none;
+    }
+
+    .github {
+        height: 7vw;
+    }
+
+    .logo {
+        font-size: 4vw;
+    }
+
+    .introduction-text {
+        width: 70vw;
+        font-size: 3vw;
+    }
+
+    .introduction-text-container {
+        margin-top: 0px;
+    }
+
+    .open-vertical {
+        display: flex;
+    }
+
+    .footerbg {
+        height: 6vw;
+    }
+
+    .footertxt {
+        font-size: 2vw;
+    }
+
+    .buttons-cont {
+        display: flex;
+        height: 23vw;
+        justify-content: center;
+        gap: 5vw;
+    }
+
+    .main-buttons {
+        font-size: 3vw;
+        width: 30vw;
+    }
+
+    .projecten-img-cont {
+        align-items: center;
+        gap: 3vw;
+        flex-direction: column;
+    }
+
+    .my-projects-img {
+        width: 80vw;
+    }
+
+}
