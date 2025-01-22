@@ -249,7 +249,7 @@ a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3vw;
     transition: all 0.2s;
-    width: 11vw;
+    width: 14vw;
 }
 
 .main-buttons:hover {
@@ -395,7 +395,7 @@ a {
     }
 
     .get-cv {
-        font-size: 1.1vw;
+        font-size: 2vw;
     }
 
     .github {
@@ -403,11 +403,11 @@ a {
     }
 
     .logo {
-        font-size: 2.5vw;
+        font-size: 4vw;
     }
 
     .introduction-text {
-        width: 60vw;
+        width: 60.5vw;
         font-size: 2.5vw;
     }
 
@@ -476,7 +476,7 @@ a {
     }
 
     .logo {
-        font-size: 4vw;
+        font-size: 7vw;
     }
 
     .introduction-text {
